@@ -1,4 +1,4 @@
-# DL_HW3
+# DL_Hw3
 Homework 3 for Selected Topics in Visual Recognition using Deep Learning
 
 # Guide
