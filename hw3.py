@@ -209,7 +209,7 @@ def main(train):
                 pred = {}
                 pred['image_id'] = list(test_dataset.coco.imgs.keys())[idx]
                 pred['category_id'] = int(predictions[0]['labels'][i])
-                masks = np.where(predictions[0]['masks'][i].numpy() > 0.5, 1, 0).astype(np.uint8)[0, :, :]
+                masks = np.where(predictions[0]['masks'][i].numpy() > 0.4, 1, 0).astype(np.uint8)[0, :, :]
                 pred['segmentation'] = binary_mask_to_rle(masks)
                 pred['score'] = float(predictions[0]['scores'][i])
                 ans.append(pred)
