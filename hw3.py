@@ -214,7 +214,7 @@ def main(train):
                 pred['score'] = float(predictions[0]['scores'][i])
                 ans.append(pred)
             if (idx + 1) % 10 == 0:
-                print(idx)
+                print(idx + 1)
 
         with open("309551123.json", "w") as f:
             json.dump(ans, f)
